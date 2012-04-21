@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/program"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:textSize="18dp" />
+
+    <com.wolfford.bryan.GraphView
+        android:id="@+id/graphView1"
+        android:layout_width="wrap_content"
+        android:layout_height="320dp" />
+
+    <Button
+        android:id="@+id/zoomIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="setScale"
+        android:text="@string/ZOOOM_IN" />
+
+    <Button
+        android:id="@+id/zoomOut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="setScale"
+        android:text="@string/ZOOM_OUT" />
+
+</LinearLayout>

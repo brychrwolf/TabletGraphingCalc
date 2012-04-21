@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, TabletGraphingCalc</string>
+    <string name="app_name">TabletGraphingCalc</string>
+    <string name="GRAPH">GRAPH</string>
+    <string name="ZOOOM_IN">Zoom In +</string>
+    <string name="ZOOM_OUT">Zoom Out -</string>
+
+</resources>
