@@ -1,5 +1,6 @@
 package com.wolfford.bryan;
 
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Stack;
@@ -46,14 +47,12 @@ public class GraphController extends Fragment implements GraphViewDataSource{
 	protected GestureDetector gestureDetector;
 	private View newGraphView; // added at 46:41 of week 7
 	
-    /** Called when the activity is first created. */
-    
+    /** Called when the activity is first created. */    
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		newGraphView = inflater.inflate(R.layout.graph, container);
-		this.graphView = (GraphView) newGraphView.findViewById(R.id.graphView1);
-		
+		this.graphView = (GraphView) newGraphView.findViewById(R.id.graphView1);		
 		this.graphView.dataSource = this;
 		this.gestureDetector = new GestureDetector(getActivity(), new GestureDetector.SimpleOnGestureListener(){
 			@Override
@@ -83,9 +82,12 @@ public class GraphController extends Fragment implements GraphViewDataSource{
 	
     public Object getProgramObject(){
 		Stack<Object> programStack = new Stack<Object>();
-		Iterator<Object> iterator = ((List<Object>) this.programObject).iterator();
-		while(iterator.hasNext())
-			programStack.push(iterator.next());
+		if(this.programObject != null){
+			@SuppressWarnings("unchecked")
+			Iterator<Object> iterator = ((List<Object>) this.programObject).iterator();
+			while(iterator.hasNext())
+				programStack.push(iterator.next());
+		}
 		return programStack;
 	}
 
@@ -95,5 +97,9 @@ public class GraphController extends Fragment implements GraphViewDataSource{
     
     public Float getScale(){
 		return this.scale;
+	}
+    
+    public Float getNextValue(Object programObject, HashMap<String, Number> values){
+		return (float) CalculatorBrain.runProgram(programObject, values);
 	}
 }

@@ -5,8 +5,6 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.Stack;
 
-import android.util.Log;
-
 public class CalculatorBrain {
 	private Stack<Object> _programStack;
 	

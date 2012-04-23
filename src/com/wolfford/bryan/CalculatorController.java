@@ -19,8 +19,17 @@ public class CalculatorController extends Fragment{
 	CalculatorBrain brain; // model
 	private boolean userIsInMiddleOfTypingNumber;
 	HashMap<String, Number> variableValues = new HashMap<String, Number>();
+
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+			Bundle savedInstanceState) {
+		calculatorView = inflater.inflate(R.layout.calc, container);
+		return calculatorView;
+	}
 	
 	public void graph(View v){
+        GraphController gc = (GraphController) getFragmentManager().findFragmentById(R.id.fragment2);
+        gc.setProgramObject(getBrain().getProgram());
 		//Intent intent = new Intent(Intent.ACTION_VIEW);
 		//intent.setClassName(this, GraphController.class.getName());
 		//intent.putExtra(PROGRAMOBJECT, (Serializable) getBrain().getProgram());
@@ -143,12 +152,5 @@ public class CalculatorController extends Fragment{
 			getDisplay().setText("ERR:Sqrt(-X). Plz hit [C]");
 		}else getDisplay().setText(Double.toString(result));
 		getRecord().setText(CalculatorBrain.descriptionOfProgram(getBrain().getProgram()));
-	}
-
-	@Override
-	public View onCreateView(LayoutInflater inflater, ViewGroup container,
-			Bundle savedInstanceState) {
-		calculatorView = inflater.inflate(R.layout.calc, container);
-		return calculatorView;
 	}
 }

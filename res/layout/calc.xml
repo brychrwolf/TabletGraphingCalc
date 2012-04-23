@@ -9,7 +9,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="right"
-        android:text="0"
+        android:text="@string/ZERO"
         android:textSize="28dp" />
     
     <TableLayout
@@ -27,28 +27,28 @@
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:onClick="digitPressed"
-                android:text="7" />
+                android:text="@string/SEVEN" />
 
             <Button
                 android:id="@+id/Button01"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:onClick="digitPressed"
-                android:text="8" />
+                android:text="@string/EIGHT" />
 
             <Button
                 android:id="@+id/Button10"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:onClick="digitPressed"
-                android:text="9" />
+                android:text="@string/NINE" />
 
             <Button
                 android:id="@+id/Button12"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:onClick="operatorPressed"
-                android:text="/" />
+                android:text="@string/DIVIDE" />
 
         </TableRow>
 
@@ -62,28 +62,28 @@
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:onClick="digitPressed"
-                android:text="4" />
+                android:text="@string/FOUR" />
 
             <Button
                 android:id="@+id/Button05"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:onClick="digitPressed"
-                android:text="5" />
+                android:text="@string/FIVE" />
 
             <Button
                 android:id="@+id/Button04"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:onClick="digitPressed"
-                android:text="6" />
+                android:text="@string/SIX" />
 
             <Button
                 android:id="@+id/button1"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:onClick="operatorPressed"
-                android:text="*" />
+                android:text="@string/MULTIPLY" />
 
         </TableRow>
 
@@ -97,28 +97,28 @@
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:onClick="digitPressed"
-                android:text="1" />
+                android:text="@string/ONE" />
 
             <Button
                 android:id="@+id/Button08"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:onClick="digitPressed"
-                android:text="2" />
+                android:text="@string/TWO" />
 
             <Button
                 android:id="@+id/Button07"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:onClick="digitPressed"
-                android:text="3" />
+                android:text="@string/THREE" />
 
             <Button
-                android:id="@+id/button1"
+                android:id="@+id/button22"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:onClick="operatorPressed"
-                android:text="-" />
+                android:text="@string/MINUS" />
 
         </TableRow>
 
@@ -132,14 +132,14 @@
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:onClick="digitPressed"
-                android:text="." />
+                android:text="@string/PERIOD" />
 
             <Button
                 android:id="@+id/Button09"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:onClick="digitPressed"
-                android:text="0" />
+                android:text="@string/ZERO" />
 
             <Button
                 android:id="@+id/Button11"
@@ -149,11 +149,11 @@
                 android:text="↲" />
 
             <Button
-                android:id="@+id/button1"
+                android:id="@+id/button16"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:onClick="operatorPressed"
-                android:text="+" />
+                android:text="@string/PLUS" />
 
         </TableRow>
         
@@ -163,25 +163,25 @@
             android:layout_height="wrap_content">
 
             <Button
-                android:id="@+id/button1"
+                android:id="@+id/button17"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:onClick="variablePressed"
-                android:text="x" />
+                android:text="@string/x" />
 
             <Button
-                android:id="@+id/button1"
+                android:id="@+id/button18"
                 android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:onClick="cPressed"
-                android:text="C" />
+                android:text="@string/C" />
 
             <Button
                 android:id="@+id/Button15"
                 android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:onClick="uPressed"
-                android:text="U" />
+                android:text="@string/U" />
 
             <Button
                 android:id="@+id/button2"
@@ -198,7 +198,7 @@
             android:layout_height="wrap_content">
 
             <Button
-                android:id="@+id/button1"
+                android:id="@+id/button19"
                 android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:onClick="operatorPressed"
@@ -209,21 +209,21 @@
                 android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:onClick="operatorPressed"
-                android:text="sin" />
+                android:text="@string/sin" />
 
             <Button
-                android:id="@+id/button1"
+                android:id="@+id/button20"
                 android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:onClick="operatorPressed"
-                android:text="cos" />
+                android:text="@string/cos" />
 
             <Button
-                android:id="@+id/button1"
+                android:id="@+id/button21"
                 android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:onClick="operatorPressed"
-                android:text="sqrt" />
+                android:text="@string/sqrt" />
 
         </TableRow>
 

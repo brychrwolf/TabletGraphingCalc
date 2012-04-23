@@ -1,10 +1,6 @@
 package com.wolfford.bryan;
 
 import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Stack;
-
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -22,6 +18,7 @@ public class GraphView extends View{
 		Object getProgramObject();
 		Point getOriginOffset();
 		Float getScale();
+		Float getNextValue(Object programObject, HashMap<String, Number> values);
 	}
 	GraphViewDataSource dataSource; /* = new GraphViewDataSource(){
 		// All added as a default view
@@ -37,7 +34,7 @@ public class GraphView extends View{
 
 		public Float getScale() {
 			return DEFAULT_SCALE;
-		}};*/
+		}}; */
 	
 	public GraphView(Context context) {
 		super(context);
@@ -51,8 +48,7 @@ public class GraphView extends View{
 	
 	private static final float DEFAULT_SCALE = 100.0F;
 	private static final int DEFAULT_STEP = 1;
-	private static final Point DEFAULT_ORIGIN = new Point(10, 470);
-	private static final Point DEFAULT_ORIGIN = new Point(10, 470);
+	private static final Point DEFAULT_ORIGIN = new Point(250, 160);
 	
 	@Override
 	public void draw(Canvas canvas){
@@ -87,16 +83,11 @@ public class GraphView extends View{
 		
 		// Function does not scale with the axes!
 		variableValues.put("x", 0 - origin.x);
-		path.moveTo(0, (float) (origin.y - runProgramUsingVariableValues(this.dataSource.getProgramObject(), variableValues)));
+		path.moveTo(0, (float) (origin.y - this.dataSource.getNextValue(this.dataSource.getProgramObject(), variableValues)));
 		for(int x = 1; x <= canvas.getClipBounds().width(); x += DEFAULT_STEP){
 			variableValues.put("x", x - origin.x);
-			path.lineTo(x, (float) (origin.y - runProgramUsingVariableValues(this.dataSource.getProgramObject(), variableValues)));
+			path.lineTo(x, (float) (origin.y - this.dataSource.getNextValue(this.dataSource.getProgramObject(), variableValues)));
 		}
 		canvas.drawPath(path, paint);
-	}
-	
-	private float runProgramUsingVariableValues(Object programObject, HashMap<String, Number> values){
-		return (float) CalculatorBrain.runProgram(programObject, values);
-	}
-	
+	}	
 }

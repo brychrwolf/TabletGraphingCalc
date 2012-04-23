@@ -22,30 +22,37 @@ public final class R {
         public static final int Button06=0x7f05000d;
         public static final int Button07=0x7f05000f;
         public static final int Button08=0x7f05000e;
-        public static final int Button09=0x7f050012;
+        public static final int Button09=0x7f050013;
         public static final int Button10=0x7f050005;
-        public static final int Button11=0x7f050013;
+        public static final int Button11=0x7f050014;
         public static final int Button12=0x7f050006;
-        public static final int Button13=0x7f050011;
-        public static final int Button14=0x7f050018;
-        public static final int Button15=0x7f050015;
-        public static final int TableRow01=0x7f050017;
+        public static final int Button13=0x7f050012;
+        public static final int Button14=0x7f05001d;
+        public static final int Button15=0x7f050019;
+        public static final int TableRow01=0x7f05001b;
         public static final int button1=0x7f05000b;
-        public static final int button2=0x7f050016;
+        public static final int button16=0x7f050015;
+        public static final int button17=0x7f050017;
+        public static final int button18=0x7f050018;
+        public static final int button19=0x7f05001c;
+        public static final int button2=0x7f05001a;
+        public static final int button20=0x7f05001e;
+        public static final int button21=0x7f05001f;
+        public static final int button22=0x7f050010;
         public static final int display=0x7f050000;
-        public static final int fragment1=0x7f05001e;
-        public static final int fragment2=0x7f05001f;
-        public static final int graphView1=0x7f05001b;
-        public static final int program=0x7f05001a;
-        public static final int record=0x7f050019;
+        public static final int fragment1=0x7f050025;
+        public static final int fragment2=0x7f050026;
+        public static final int graphView1=0x7f050022;
+        public static final int program=0x7f050021;
+        public static final int record=0x7f050020;
         public static final int tableLayout1=0x7f050001;
         public static final int tableRow1=0x7f050002;
         public static final int tableRow2=0x7f050007;
         public static final int tableRow3=0x7f05000c;
-        public static final int tableRow4=0x7f050010;
-        public static final int tableRow5=0x7f050014;
-        public static final int zoomIn=0x7f05001c;
-        public static final int zoomOut=0x7f05001d;
+        public static final int tableRow4=0x7f050011;
+        public static final int tableRow5=0x7f050016;
+        public static final int zoomIn=0x7f050023;
+        public static final int zoomOut=0x7f050024;
     }
     public static final class layout {
         public static final int calc=0x7f030000;
@@ -53,10 +60,31 @@ public final class R {
         public static final int main=0x7f030002;
     }
     public static final class string {
+        public static final int C=0x7f040015;
+        public static final int DIVIDE=0x7f04000f;
+        public static final int EIGHT=0x7f04000d;
+        public static final int FIVE=0x7f04000a;
+        public static final int FOUR=0x7f040009;
         public static final int GRAPH=0x7f040002;
+        public static final int MINUS=0x7f040012;
+        public static final int MULTIPLY=0x7f040010;
+        public static final int NINE=0x7f04000e;
+        public static final int ONE=0x7f040006;
+        public static final int PERIOD=0x7f040013;
+        public static final int PLUS=0x7f040011;
+        public static final int SEVEN=0x7f04000c;
+        public static final int SIX=0x7f04000b;
+        public static final int THREE=0x7f040008;
+        public static final int TWO=0x7f040007;
+        public static final int U=0x7f040016;
+        public static final int ZERO=0x7f040005;
         public static final int ZOOM_OUT=0x7f040004;
         public static final int ZOOOM_IN=0x7f040003;
         public static final int app_name=0x7f040001;
+        public static final int cos=0x7f040018;
         public static final int hello=0x7f040000;
+        public static final int sin=0x7f040017;
+        public static final int sqrt=0x7f040019;
+        public static final int x=0x7f040014;
     }
 }
